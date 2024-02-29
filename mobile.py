@@ -1,4 +1,4 @@
-### Health Management APP
+### Mobile Recognization App
 from dotenv import load_dotenv
 
 load_dotenv() ## load all the environment variables
