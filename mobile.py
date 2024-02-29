@@ -52,9 +52,6 @@ input_prompt="""
 You are an expert in mobiles and electronics and you need to identify the mobile and its parts
 and need to define the parts and explain about the parts like battery,camera ,sound system, display,
 ram , processor, 4g or 5g .
-     mobile recognized : <name of moblie> 
-      Origin : <nationality/region>( itshould be bold bigger in text in 
-      old london font it should be bigger than other text this is title)
 out put should br like the below moentioned format 
                   FONT SHOULD TIMES NEW ROMAN
                    list its parts one by one like bulletin points
