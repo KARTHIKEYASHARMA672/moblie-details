@@ -8,7 +8,7 @@ import os
 import google.generativeai as genai
 from PIL import Image
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+genai.configure(api_key=os.getenv("AIzaSyDt9PK2goi-jk9hZW9SOF6JoNnAMg_SmeY"))
 
 ## Function to load Google Gemini Pro Vision API And get response
 
@@ -35,9 +35,9 @@ def input_image_setup(uploaded_file):
     
 ##initialize our streamlit app
 
-st.set_page_config(page_title="Gemini Health App")
+st.set_page_config(page_title="Mobile details recognizer")
 
-st.header("Gemini Health App")
+st.header("Mobile details recognizer")
 input=st.text_input("Input Prompt: ",key="input")
 uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
 image=""   
@@ -46,17 +46,26 @@ if uploaded_file is not None:
     st.image(image, caption="Uploaded Image.", use_column_width=True)
 
 
-submit=st.button("Tell me the total calories")
+submit=st.button("Tell me the details")
 
 input_prompt="""
-You are an expert in nutritionist where you need to see the food items from the image
-               and calculate the total calories, also provide the details of every food items with calories intake
-               is below format
+You are an expert in mobiles and electronics and you need to identify the mobile and its parts
+and need to define the parts and explain about the parts like battery,camera ,sound system, display,
+ram , processor, 4g or 5g .
+     mobile recognized : <name of moblie> 
+      Origin : <nationality/region>( itshould be bold bigger in text in 
+      old london font it should be bigger than other text this is title)
+out put should br like the below moentioned format 
+                  FONT SHOULD TIMES NEW ROMAN
+                   list its parts one by one like bulletin points
+                   explain about its parts in seperatley with minimum 100 words
+                   who manufactured that ,machine (200 WORDS)
+                   say about that manufacturing company, THEIR AIM ETC ( 150 WORDS)
+    the above given should be made properly , with good english
 
-               1. Item 1 - no of calories
-               2. Item 2 - no of calories
-               ----
-               ----
+    ----
+    ----
+
 
 
 """
